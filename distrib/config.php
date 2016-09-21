@@ -13,7 +13,7 @@ $main_path = str_replace("\\", "/", $main_path); // reverce slash in path
 if (!file_exists("$main_path/$unit_name")) 
 	die ("Error: The directory '$main_path/$unit_name' does not exist!");
 
-// determine the pachs to files for auto-configuring
+// determine the paths to files for auto-configuring
 if ($unit_name == "php") {
 
 	$bak_file = "$main_path/php/php.ini.bak";

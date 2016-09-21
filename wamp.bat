@@ -1,9 +1,9 @@
 @echo off
 @rem *************************************************************
-@REM  " Auto Installer of WAMP units for 32- and 64-bit Windows  "
-@REM  " Windows 7..10 + Apache 2.4 + MySQL 5.6 + PHP 5.6 (WAMP)  "
-@REM  "   for more info see the following web-page:              "
-@REM  "   http://blog.denisbondar.com/post/apache24php56win7     "
+@rem  " Auto Installer of WAMP units for 32- and 64-bit Windows  "
+@rem  " Windows 7..10 + Apache 2.4 + MySQL 5.6 + PHP 5.6 (WAMP)  "
+@rem  "   for more info see the following web-page:              "
+@rem  "   http://blog.denisbondar.com/post/apache24php56win7     "
 @rem *************************************************************
 @rem        "change your installation directory here"
 
@@ -155,7 +155,7 @@ echo.
 echo Note that the web and sql servers have installed as windows 
 echo services. So they will start up each time you reboot your 
 echo computer. You can switch them to 'started manually' mode if 
-echo you don't need this functional.
+echo you do not need this functional.
 echo.
 echo As well remember that your sql-server has no password for 
 echo root user. Start DB console '%ROOTDIR%\mysql\bin\mysql.exe' 
