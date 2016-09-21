@@ -13,8 +13,8 @@ supported.
 
 Firstly download this repository on your local drive. Once you have the **WAMP** 
 root direcotry, download
-[wamp.zip](https://drive.google.com/open?id=0B_8B-dFXY5lBU0tjM0FLMmlqLUE) and 
-unzip it to **WAMP\distrib** subdirectory.
+[wamp.zip](https://drive.google.com/open?id=0B_8B-dFXY5lBU0tjM0FLMmlqLUE) (74M) 
+and unzip it to **WAMP\distrib** subdirectory.
 
 The **wamp.zip** consists of command line **unzip.exe** application and two 
 corresponding archives: **WAMPx64.zip** and **WAMPx86.zip**. The **wamp.bat** 
@@ -49,7 +49,7 @@ place:
 
 ```
 
-In addition web and sql servers have been installed as Window services: 
+In addition web and sql servers have been installed as Windows services: 
 **Apache24** and **MySQL**.
 
 To uninstall the server run:
