@@ -26,15 +26,34 @@ You may want to build your own kit.
 
 ## Usage
 
+>Note: The installer uses **D:\HOST** as root directory for WAMP stuff. You 
+may change it by editing **ROOTDIR** in **wamp.bat**.
+
+To install the **WAMP** server run:
+
 ```
 wamp.bat install
 ```
 
-or
+When you have the **WAMP** installed you get all the server stuff in one 
+place:
+
+```
+ D:\HOST\
+         |___ apache\
+         |___ log\
+         |___ mysql\
+         |___ php\
+         |___ tmp\
+         |___ www\
+
+```
+
+To uninstall the server run:
 
 ```
 wamp.bat uninstall
 ```
 
->Note: The installer uses **D:\HOST** as root directory for WAMP stuff. You 
-may change it by editing **ROOTDIR** in **wamp.bat**.
+>Note: The **www** subdirectory will not be deleted. So save your work and 
+delete it manually.
