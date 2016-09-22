@@ -19,8 +19,21 @@ command to do that:
 ```
 
 Once you have the **WAMP** root direcotry, download
-[wamp.zip](https://drive.google.com/open?id=0B_8B-dFXY5lBU0tjM0FLMmlqLUE) (74M) 
-and unzip it to **WAMP\distrib** subdirectory.
+[wamp.zip](https://drive.google.com/open?id=0B_8B-dFXY5lBbHNUWndNQ21KLVk) 
+(77M) and unzip it to **WAMP\distrib** subdirectory. From now you must to have 
+the following structure of files:
+
+```
+ WAMP\
+      |___ wamp.bat
+      |___ README.md
+      |___ distrib\
+                   |___ config.php
+                   |___ index.php
+                   |___ unzip.exe
+                   |___ WAMPx64.zip
+                   |___ WAMPx86.zip
+```
 
 The **wamp.zip** consists of command line **unzip.exe** application and two 
 corresponding archives: **WAMPx64.zip** and **WAMPx86.zip**. The **wamp.bat** 
@@ -53,7 +66,6 @@ place:
          |___ php\
          |___ tmp\
          |___ www\
-
 ```
 
 In addition, web and sql servers have been installed as Windows services: 

@@ -16,12 +16,14 @@ set DISTRIB=%CD%\distrib
 if "%1" equ "uninstall" (
 	if exist %ROOTDIR% ( goto ROOTEXISTS ) else (
 		echo Nothing to uninstall. Bye.
+		pause
 		exit 0
 	)
 ) else if "%1" equ "install" (
 	if exist %ROOTDIR% ( goto ROOTEXISTS ) else goto STARTINSTALL
 ) else (
 	echo Use 'install' or 'uninstall' option
+	pause
 	exit 1
 )
 
@@ -32,6 +34,7 @@ echo All appropriate subdirectories will be deleted!
 set /p input="Do you want to continue anyway? (Y/N): "
 if /i "%input%" neq "Y" (
 	echo Exiting...
+	pause
 	exit 1
 )
 
@@ -56,11 +59,21 @@ if exist %ROOTDIR%\log 		rmdir /s /q  %ROOTDIR%\log
 if /i "%1" equ "uninstall" ( 
 	echo.
 	echo Done. Remove the root directory '%ROOTDIR%' manually!
+	pause
 	exit 0
 )
 
 
 :STARTINSTALL
+echo.
+echo Checking for dependencies...
+if not exist %DISTRIB%\unzip.exe (
+	echo Error: unzip.exe is missing!
+	echo Download and unzip 'wamp.zip' to 'distrib' folder.
+	pause
+	exit 1
+)
+
 echo.
 @rem "determine the system architecture"
 systeminfo | find "based" > temp.txt
@@ -75,13 +88,15 @@ del /q temp.txt
 @rem "check the windows version out"
 if /i "%os%" neq "Windows" (
 	echo Error: Unsupported Platphorm!
+	pause
 	exit 1
 )
 @rem "only win 7, 8, 8.1 and 10 are allowed"
 if "%ver%" neq "6.1" if "%ver%" neq "6.2" if "%ver%" neq "6.3" (
 	@rem "the same thing for windows 10"
 	if "%ver%" neq "10.0" (
-		echo Unsupported Windows Version
+		echo Error: Unsupported Windows Version!
+		pause
 		exit 1
 ))
 echo System checking: %os% [%ver%] %base%: OK
@@ -163,6 +178,6 @@ echo and use the following sql command to set the password:
 echo.
 echo  SET PASSWORD FOR 'root'@'localhost' = PASSWORD('NewPass');
 echo.
-pause
 @rem *************************************************************
+pause
 exit 0
