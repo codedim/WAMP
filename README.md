@@ -1,18 +1,24 @@
 # WAMP
 
-**WAMP** project is an auto-installer of WAMP server units for 32- and 64-bit 
-Windows platforms.
+**WAMP** project is an auto-installer for WAMP server units (Apache, MySQL, PHP) 
+on 32/64-bit Windows platforms.
 
 It's useful if you need to have installed bunch of "**Apache 2.4 + MySQL 5.6 + 
-PHP 5.6**" on your windows system quickly. Only **Windows 7 SP1, Vista SP2, 
+PHP 5.6**" on your Windows system quickly. Only **Windows 7 SP1, Vista SP2, 
 8 / 8.1, 10, Server 2008 SP2 / R2 SP1, Server 2012 / R2, Server 2016** are 
 supported.
 
 
 ## Installation
 
-Firstly download this repository on your local drive. Once you have the **WAMP** 
-root direcotry, download
+Firstly download this repository on your local drive. Use the following **git** 
+command to do that:
+
+```
+ git clone https://github.com/codedim/WAMP
+```
+
+Once you have the **WAMP** root direcotry, download
 [wamp.zip](https://drive.google.com/open?id=0B_8B-dFXY5lBU0tjM0FLMmlqLUE) (74M) 
 and unzip it to **WAMP\distrib** subdirectory.
 
@@ -21,7 +27,8 @@ corresponding archives: **WAMPx64.zip** and **WAMPx86.zip**. The **wamp.bat**
 script will select appropriate zip-file automatically.
 	
 >Note: Each zip-file has a minimal set of necessary files to start WAMP server. 
-You may want to build your own kit.
+You may build your own kit with different versions of units, extended set of 
+files and modules and so on.
 
 
 ## Usage
@@ -29,7 +36,7 @@ You may want to build your own kit.
 >Note: The installer uses **D:\HOST** as root directory for the server. You 
 may change it by editing **ROOTDIR** in **wamp.bat**.
 
-To install the **WAMP** server run:
+To install the **WAMP** server, run:
 
 ```
 wamp.bat install
@@ -49,14 +56,15 @@ place:
 
 ```
 
-In addition web and sql servers have been installed as Windows services: 
+In addition, web and sql servers have been installed as Windows services: 
 **Apache24** and **MySQL**.
 
-To uninstall the server run:
+To uninstall the server, run:
 
 ```
 wamp.bat uninstall
 ```
 
->Note: The **www** subdirectory will not be deleted. So save your work and 
-delete it manually.
+>Note: The **www** subdirectory will not be deleted. So save your work (e.g. 
+http and php files) and remove it manually. But your MySQL DBs will be deleted 
+irretrievably.

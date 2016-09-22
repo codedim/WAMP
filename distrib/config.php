@@ -1,12 +1,12 @@
 <?php
 /* 
-** 	WAMP/LAMP units auto-configuration script.
+** 	Auto-configuration script for WAMP/LAMP units (Apache, MySQL, PHP).
 */
 
-$main_path = $argv[1]; // main path to unit subdirectories
+$main_path = $argv[1]; // main path for unit subdirectories
 $unit_name = $argv[2]; // unit name to configure: "apache","php","mysql"
 
-// check out the arguments
+// check out the script arguments
 if (!($main_path) || !($unit_name)) 
 	die ("Error: The required script argument is not specified!");
 $main_path = str_replace("\\", "/", $main_path); // reverce slash in path
