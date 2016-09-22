@@ -26,9 +26,9 @@ The **wamp.zip** consists of command line **unzip.exe** application and two
 corresponding archives: **WAMPx64.zip** and **WAMPx86.zip**. The **wamp.bat** 
 script will select appropriate zip-file automatically.
 	
->Note: Each zip-file has a minimal set of necessary files to start WAMP server. 
-You may build your own kit with different versions of units, extended set of 
-files and modules and so on.
+>Note: Each zip-file has a minimal set of necessary files to start WAMP server 
+up. You may build your own kit with different versions of units, extended set 
+of files and modules and so on.
 
 
 ## Usage
