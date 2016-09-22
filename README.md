@@ -20,7 +20,7 @@ command to do that:
 
 Once you have the **WAMP** root direcotry, download
 [wamp.zip](https://drive.google.com/open?id=0B_8B-dFXY5lBbHNUWndNQ21KLVk) 
-(77M) and unzip it to **WAMP\distrib** subdirectory. From now you must to have 
+(75M) and unzip it to **WAMP\distrib** subdirectory. From now you must to have 
 the following structure of files:
 
 ```
