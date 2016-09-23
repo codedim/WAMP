@@ -68,8 +68,15 @@ place:
          |___ www\
 ```
 
-In addition, web and sql servers have been installed as Windows services: 
-**Apache24** and **MySQL**.
+In addition, web and sql servers have been installed as Windows services 
+(**Apache2.4** and **MySQL**) in **start on demand** mode. You can switch them 
+to **start auto** mode if you need them permanently. Or use the following 
+command to start/stop them manually:
+
+```
+wamp.bat start
+wamp.bat stop
+```
 
 To uninstall the server, run:
 

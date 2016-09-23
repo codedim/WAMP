@@ -13,16 +13,30 @@ set DISTRIB=%CD%\distrib
 @rem *************************************************************
 
 @rem "prevent of unwanted start"
-if "%1" equ "uninstall" (
+if /i "%1" equ "uninstall" (
 	if exist %ROOTDIR% ( goto ROOTEXISTS ) else (
 		echo Nothing to uninstall. Bye.
 		pause
 		exit 0
 	)
-) else if "%1" equ "install" (
+) else /i if "%1" equ "install" (
 	if exist %ROOTDIR% ( goto ROOTEXISTS ) else goto STARTINSTALL
+) else /i if "%1" equ "start" (
+	net start MySQL
+	net start Apache2.4
+	echo.
+	pause
+	exit 1
+) else /i if "%1" equ "stop" (
+	net stop Apache2.4
+	net stop MySQL
+	echo.
+	pause
+	exit 1
 ) else (
-	echo Use 'install' or 'uninstall' option
+	echo " Using:                              " 
+	echo " > wamp install|start|stop|uninstall "
+	echo.
 	pause
 	exit 1
 )
@@ -135,6 +149,7 @@ echo Configuring MySQL...
 echo.
 echo Testing the web-server...
 %ROOTDIR%\apache\bin\httpd.exe -k install
+sc config Apache2.4 start= demand
 %ROOTDIR%\apache\bin\httpd.exe -k start
 echo.
 start explorer http://localhost
@@ -152,6 +167,7 @@ pause
 echo.
 echo Testing the sql-server...
 %ROOTDIR%\mysql\bin\mysqld.exe --install
+sc config MySQL start= demand
 net start MySQL
 %ROOTDIR%\mysql\bin\mysqladmin.exe ping
 echo.
@@ -168,9 +184,10 @@ echo and working correctly. Go to the '%ROOTDIR%\WWW' directory
 echo to develop your HTML and PHP files.
 echo.
 echo Note that the web and sql servers have installed as windows 
-echo services. So they will start up each time you reboot your 
-echo computer. You can switch them to 'started manually' mode if 
-echo you do not need this functional.
+echo services and configured to 'start on demand' mode. So they 
+echo will not startup you reboot the computer. You might switch 
+echo them to 'start auto' mode or use 'start' and 'stop' options 
+echo when you exactly need them.
 echo.
 echo As well remember that your sql-server has no password for 
 echo root user. Start DB console '%ROOTDIR%\mysql\bin\mysql.exe' 
