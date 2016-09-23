@@ -19,20 +19,18 @@ if /i "%1" equ "uninstall" (
 		pause
 		exit 0
 	)
-) else /i if "%1" equ "install" (
+) else if /i "%1" equ "install" (
 	if exist %ROOTDIR% ( goto ROOTEXISTS ) else goto STARTINSTALL
-) else /i if "%1" equ "start" (
+) else if /i "%1" equ "start" (
 	net start MySQL
 	net start Apache2.4
-	echo.
 	pause
-	exit 1
-) else /i if "%1" equ "stop" (
+	exit 0
+) else if /i "%1" equ "stop" (
 	net stop Apache2.4
 	net stop MySQL
-	echo.
 	pause
-	exit 1
+	exit 0
 ) else (
 	echo " Using:                              " 
 	echo " > wamp install|start|stop|uninstall "
@@ -45,6 +43,7 @@ if /i "%1" equ "uninstall" (
 :ROOTEXISTS
 echo The WAMP server root directory '%ROOTDIR%' exists.
 echo All appropriate subdirectories will be deleted!
+echo.
 set /p input="Do you want to continue anyway? (Y/N): "
 if /i "%input%" neq "Y" (
 	echo Exiting...
@@ -73,6 +72,7 @@ if exist %ROOTDIR%\log 		rmdir /s /q  %ROOTDIR%\log
 if /i "%1" equ "uninstall" ( 
 	echo.
 	echo Done. Remove the root directory '%ROOTDIR%' manually!
+	echo.
 	pause
 	exit 0
 )
@@ -174,7 +174,7 @@ echo.
 echo ** You have to see 'mysqld is alive' in the line above.
 pause
 
-@rem *************************************************************
+echo *************************************************************
 echo.
 echo Congrats!
 echo.
@@ -195,6 +195,7 @@ echo and use the following sql command to set the password:
 echo.
 echo  SET PASSWORD FOR 'root'@'localhost' = PASSWORD('NewPass');
 echo.
-@rem *************************************************************
+echo *************************************************************
+echo.
 pause
 exit 0

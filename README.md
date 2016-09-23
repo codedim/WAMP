@@ -71,7 +71,7 @@ place:
 In addition, web and sql servers have been installed as Windows services 
 (**Apache2.4** and **MySQL**) in **start on demand** mode. You can switch them 
 to **start auto** mode if you need them permanently. Or use the following 
-command to start/stop them manually:
+commands to start/stop them manually:
 
 ```
 wamp.bat start
