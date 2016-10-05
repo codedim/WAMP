@@ -4,9 +4,8 @@
 on 32/64-bit Windows platforms.
 
 It's useful if you need to have installed bunch of "**Apache 2.4 + MySQL 5.6 + 
-PHP 5.6**" on your Windows system quickly. Only **Windows 7 SP1, Vista SP2, 
-8 / 8.1, 10, Server 2008 SP2 / R2 SP1, Server 2012 / R2, Server 2016** are 
-supported.
+PHP 5.6**" on your Windows system quickly. Only **Windows 7, Vista, 8/8.1, 10, 
+Server 2008, Server 2012, Server 2016** are supported.
 
 
 ## Installation
@@ -19,8 +18,8 @@ command to do that:
 ```
 
 Once you have the **WAMP** root direcotry, download
-[wamp.zip](https://drive.google.com/open?id=0B_8B-dFXY5lBbHNUWndNQ21KLVk) 
-(75M) and unzip it to **WAMP\distrib** subdirectory. From now you must to have 
+[wamp.zip](https://drive.google.com/open?id=0B_8B-dFXY5lBazJHS1ZWV1hjdzQ)
+(77M) and unzip it to **WAMP\distrib** subdirectory. From now you must to have 
 the following structure of files:
 
 ```
