@@ -48,7 +48,7 @@ of files and modules and so on.
 >Note: The installer uses **D:\HOST** as root directory for the server. You 
 may change it by editing **ROOTDIR** in **wamp.bat**.
 
-To install the **WAMP** server, run:
+To install the **WAMP** server, run as administrator:
 
 ```
 wamp.bat install
