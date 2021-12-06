@@ -18,7 +18,7 @@ command to do that:
 ```
 
 Once you have the **WAMP** root direcotry, download
-[wamp.zip](https://drive.google.com/open?id=0B_8B-dFXY5lBazJHS1ZWV1hjdzQ)
+[wamp.zip](https://drive.google.com/file/d/0B_8B-dFXY5lBazJHS1ZWV1hjdzQ/view?usp=sharing&resourcekey=0-B3WT1M-la3JmziQxOJVtmg)
 (77M) and unzip it to **WAMP\distrib** subdirectory. From now you must to have 
 the following structure of files:
 
